@@ -1,0 +1,32 @@
+2026-09-25 14:20:33,112 - INFO - __main__ - Traffic data pipeline started.
+2026-09-25 14:20:33,170 - INFO - __main__ - Raw dataset loaded successfully: 48204 rows, 9 columns
+2026-09-25 14:20:33,171 - INFO - __main__ - Schema validation successful.
+2026-09-25 14:20:33,176 - WARNING - __main__ - 48143 missing holiday values replaced with 'None'.
+2026-09-25 14:20:33,185 - INFO - __main__ - No inconsistent spacing found in column 'holiday'.
+2026-09-25 14:20:33,194 - INFO - __main__ - No inconsistent spacing found in column 'weather_main'.
+2026-09-25 14:20:33,205 - INFO - __main__ - No inconsistent spacing found in column 'weather_description'.
+2026-09-25 14:20:33,222 - INFO - __main__ - All date_time values parsed successfully.
+2026-09-25 14:20:33,253 - WARNING - __main__ - 17 duplicate rows removed.
+2026-09-25 14:20:33,258 - WARNING - __main__ - 4 invalid temperature values imputed using month 1 median 266.83 K.
+2026-09-25 14:20:33,260 - WARNING - __main__ - 6 invalid temperature values imputed using month 2 median 266.51 K.
+2026-09-25 14:20:33,271 - WARNING - __main__ - 1 invalid rainfall values imputed with median 0.00 mm.
+2026-09-25 14:20:33,272 - INFO - __main__ - No negative snow values found.
+2026-09-25 14:20:33,273 - INFO - __main__ - No invalid cloud coverage values found.
+2026-09-25 14:20:33,434 - INFO - __main__ - Cleaned dataset saved successfully to data\traffic_cleaned.csv
+2026-09-25 14:20:33,434 - INFO - __main__ - Starting feature engineering.
+2026-09-25 14:20:33,435 - INFO - feature_engineering - Dataset shape before feature engineering: 48187 rows, 9 columns.
+2026-09-25 14:20:33,453 - INFO - feature_engineering - Created hour, day_of_week and is_weekend features.
+2026-09-25 14:20:33,456 - INFO - feature_engineering - Created cyclical hour features: hour_sin and hour_cos.
+2026-09-25 14:20:33,459 - INFO - feature_engineering - Created adverse_weather indicator.
+2026-09-25 14:20:33,476 - INFO - feature_engineering - Encoded weather_main using one-hot encoding.
+2026-09-25 14:20:33,479 - INFO - feature_engineering - Created scaled versions of temp and traffic_volume.
+2026-09-25 14:20:33,488 - INFO - feature_engineering - Created congestion_category using traffic volume quartiles.
+2026-09-25 14:20:33,488 - INFO - feature_engineering - Dataset shape after feature engineering: 48187 rows, 28 columns.
+2026-09-25 14:20:33,853 - INFO - feature_engineering - Feature-engineered dataset saved to data\traffic_features.csv.
+2026-09-25 14:20:33,853 - INFO - __main__ - Starting visualisation stage.
+2026-09-25 14:20:33,855 - INFO - visualizations - Starting traffic visualisation generation.
+2026-09-25 14:20:34,225 - INFO - visualizations - Saved traffic-by-hour figure to figures\traffic_by_hour.png.
+2026-09-25 14:20:34,404 - INFO - visualizations - Saved weekday-vs-weekend figure to figures\weekday_weekend.png.
+2026-09-25 14:20:35,561 - INFO - visualizations - Saved temperature-vs-traffic figure to figures\temperature_traffic.png.
+2026-09-25 14:20:35,561 - INFO - visualizations - All traffic visualisations created successfully.
+2026-09-25 14:20:35,562 - INFO - __main__ - Traffic data pipeline completed successfully. Final dataset: 48187 rows, 28 columns.
