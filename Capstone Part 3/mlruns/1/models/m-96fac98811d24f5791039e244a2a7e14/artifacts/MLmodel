@@ -1,0 +1,24 @@
+artifact_path: file:C:/Users/hangz/OneDrive/Documents/P-KymPC/NUS Comp/Capstone/Capstone
+  Part 2/mlruns/1/models/m-96fac98811d24f5791039e244a2a7e14/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.13.9
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types: null
+mlflow_version: 3.15.1
+model_id: m-96fac98811d24f5791039e244a2a7e14
+model_size_bytes: 5335788
+model_uuid: m-96fac98811d24f5791039e244a2a7e14
+prompts: null
+run_id: 4a1c9d70816444b6a646863bc5a8cdf8
+utc_time_created: '2026-09-25 07:47:52.291642'
